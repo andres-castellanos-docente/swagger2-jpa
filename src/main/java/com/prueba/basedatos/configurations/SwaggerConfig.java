@@ -16,16 +16,19 @@ import java.util.Collections;
 @EnableSwagger2
 public class SwaggerConfig {
 
+
 	@Bean
 	public Docket apiDocket() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
+			//	.apis(RequestHandlerSelectors.any())
 				.apis(RequestHandlerSelectors.basePackage("com.prueba.basedatos.controllers"))
 				.paths(PathSelectors.any())
 				.build()
-				.apiInfo(getApiInfo())
-				;
+				.apiInfo(getApiInfo());
 	}
+
+
 
 	private ApiInfo getApiInfo() {
 		return new ApiInfo(
