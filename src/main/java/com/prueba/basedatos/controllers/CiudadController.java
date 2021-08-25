@@ -54,7 +54,7 @@ public class CiudadController {
             value = "Json activo, idPais",
             required = true) @RequestBody CiudadRequests ciudadRequests) {
 
-        return ciudadService.inactivarCiudad(ciudadRequests);
+        return ciudadService.inactivarCiudadporPais(ciudadRequests);
     }
 
 

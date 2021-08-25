@@ -13,6 +13,6 @@ public interface CiudadService {
   ResponseEntity<CiudadResponse> removeCiudad(Integer idCiudad);
   ResponseEntity<CiudadResponse> getCiudadFinNombre(String nombre);
   ResponseEntity<CiudadResponse> getCiudadFinNombreNative(String nombre);
-  ResponseEntity<CiudadResponse> inactivarCiudad(CiudadRequests ciudadRequests);
+  ResponseEntity<CiudadResponse> inactivarCiudadporPais(CiudadRequests ciudadRequests);
 
 }
